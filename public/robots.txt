@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lalon-rahman-tirtha.netlify.app/sitemap.xml
