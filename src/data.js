@@ -24,16 +24,11 @@ export const profile = {
   tagline:
     'I build web and mobile products end to end — React and Next.js on the front, Node.js, Express and MongoDB/PostgreSQL behind — and I like to break them too, with a Kali box always within reach.',
   about: [
-    "I'm a developer currently completing a BSc (Hons) in Applied Mathematics at the University of Dhaka. I started with the MERN stack in 2022 and have since shipped full products: marketplaces, learning platforms, an auto-repair parts management system and a cross-platform goal-tracking app.",
+    "I'm a developer who started with the MERN stack in 2022 and have since shipped full products: marketplaces, learning platforms, an auto-repair parts management system and a cross-platform goal-tracking app.",
     'Outside of building things I spend time on the offensive side of security — CTFs, network scanning and web app testing with Nmap, Burp Suite and Metasploit. It makes me a more careful engineer: I think about auth, input validation and rate limiting before the first line of a feature is written.',
     "I'm open to full-time, contract and freelance work, remote or on-site.",
   ],
   interests: ['Machine Learning', 'Artificial Intelligence', 'Cloud Computing', 'Cyber Security', 'Robotics'],
-  education: {
-    degree: 'BSc (Hons) in Applied Mathematics',
-    school: 'University of Dhaka',
-    period: '2022 — Present',
-  },
   social: {
     github: 'https://github.com/lalon147',
     linkedin: 'https://www.linkedin.com/in/lalon-rahman-tirtha/',
