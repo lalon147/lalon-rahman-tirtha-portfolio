@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowRight, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaArrowRight } from 'react-icons/fa'
 import { profile } from '../data'
 import { useTypewriter } from '../hooks'
 
@@ -15,8 +15,6 @@ export function Hero() {
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1 font-mono text-xs text-muted">
             <span className="h-2 w-2 rounded-full bg-emerald-400" />
             Open to work
-            <span className="text-border">|</span>
-            <FaMapMarkerAlt className="text-accent" /> {profile.location}
           </p>
 
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl">
@@ -27,8 +25,10 @@ export function Hero() {
             .
           </h1>
 
-          <p className="caret mt-4 font-mono text-xl text-muted sm:text-2xl" aria-live="polite">
-            {role}
+          {/* Screen readers get the static list; the animated text is decorative. */}
+          <p className="mt-4 font-mono text-xl text-muted sm:text-2xl">
+            <span className="sr-only">{profile.roles.join(', ')}</span>
+            <span className="caret" aria-hidden="true">{role}</span>
           </p>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{profile.tagline}</p>
@@ -49,7 +49,6 @@ export function Hero() {
             <div className="ml-1 flex items-center gap-4 text-xl text-muted">
               <a href={profile.social.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:text-text"><FaGithub /></a>
               <a href={profile.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-text"><FaLinkedin /></a>
-              <a href={`mailto:${profile.email}`} aria-label="Email" className="hover:text-text"><FaEnvelope /></a>
             </div>
           </div>
         </div>
@@ -59,9 +58,11 @@ export function Hero() {
           <img
             src={profile.photo}
             alt={profile.name}
-            width="640"
-            height="640"
-            className="relative aspect-square w-full rounded-3xl border border-border object-cover shadow-2xl"
+            width="316"
+            height="395"
+            fetchPriority="high"
+            decoding="async"
+            className="relative aspect-[4/5] w-full rounded-3xl border border-border object-cover object-top shadow-2xl"
           />
         </div>
       </div>

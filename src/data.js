@@ -19,17 +19,13 @@ export const profile = {
   firstName: 'Lalon',
   title: 'Full-Stack Developer',
   roles: ['Full-Stack Developer', 'React & Next.js Developer', 'React Native Developer', 'Security Enthusiast'],
-  location: 'Dhaka, Bangladesh',
-  email: 'lalon.rahman147@gmail.com',
-  phone: '+880 1533-153250',
   photo,
-  resume: '/Lalon_Rahman_Tirtha_Resume.pdf',
   tagline:
     'I build web and mobile products end to end — React and Next.js on the front, Node.js, Express and MongoDB/PostgreSQL behind — and I like to break them too, with a Kali box always within reach.',
   about: [
-    "I'm a developer from Dhaka currently completing a BSc (Hons) in Applied Mathematics at the University of Dhaka. I started with the MERN stack in 2022 and have since shipped full products: marketplaces, learning platforms, an auto-repair parts management system and a cross-platform goal-tracking app.",
+    "I'm a developer currently completing a BSc (Hons) in Applied Mathematics at the University of Dhaka. I started with the MERN stack in 2022 and have since shipped full products: marketplaces, learning platforms, an auto-repair parts management system and a cross-platform goal-tracking app.",
     'Outside of building things I spend time on the offensive side of security — CTFs, network scanning and web app testing with Nmap, Burp Suite and Metasploit. It makes me a more careful engineer: I think about auth, input validation and rate limiting before the first line of a feature is written.',
-    "I'm open to full-time, contract and freelance work — remote or in Dhaka.",
+    "I'm open to full-time, contract and freelance work, remote or on-site.",
   ],
   interests: ['Machine Learning', 'Artificial Intelligence', 'Cloud Computing', 'Cyber Security', 'Robotics'],
   education: {
@@ -40,7 +36,6 @@ export const profile = {
   social: {
     github: 'https://github.com/lalon147',
     linkedin: 'https://www.linkedin.com/in/lalon-rahman-tirtha/',
-    instagram: 'https://www.instagram.com/lalon_rahman2/',
   },
 }
 

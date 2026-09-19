@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaInstagram, FaFileDownload } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Section } from './Section'
 import { profile } from '../data'
 
@@ -9,15 +9,11 @@ export function Contact() {
       <div className="grid gap-10 md:grid-cols-2">
         <div>
           <p className="max-w-md text-lg leading-relaxed text-muted">
-            Have a project, a role, or just want to talk shop? My inbox is open — I usually reply within a day.
+            Have a project, a role, or just want to talk shop? Send a message below or reach me on LinkedIn — I usually reply within a day.
           </p>
           <ul className="mt-8 space-y-4">
-            <li><a className={row} href={`mailto:${profile.email}`}><FaEnvelope className="text-accent" /> {profile.email}</a></li>
-            <li><a className={row} href={`tel:${profile.phone.replace(/[^+\d]/g, '')}`}><FaPhone className="text-accent" /> {profile.phone}</a></li>
             <li><a className={row} href={profile.social.linkedin} target="_blank" rel="noreferrer"><FaLinkedin className="text-accent" /> linkedin.com/in/lalon-rahman-tirtha</a></li>
             <li><a className={row} href={profile.social.github} target="_blank" rel="noreferrer"><FaGithub className="text-accent" /> github.com/lalon147</a></li>
-            <li><a className={row} href={profile.social.instagram} target="_blank" rel="noreferrer"><FaInstagram className="text-accent" /> @lalon_rahman2</a></li>
-            <li><a className={row} href={profile.resume} target="_blank" rel="noreferrer"><FaFileDownload className="text-accent" /> Download resume (PDF)</a></li>
           </ul>
         </div>
 
@@ -26,7 +22,7 @@ export function Contact() {
           name="contact"
           method="POST"
           data-netlify="true"
-          netlify-honeypot="bot-field"
+          data-netlify-honeypot="bot-field"
           action="/thanks.html"
           className="space-y-4 rounded-xl border border-border bg-surface p-6"
         >

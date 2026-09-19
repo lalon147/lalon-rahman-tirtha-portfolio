@@ -29,9 +29,12 @@ export function useReveal() {
   useEffect(() => {
     const el = ref.current
     if (!el) return
+    if (!('IntersectionObserver' in window)) { el.classList.add('in'); return }
+    // threshold 0 + a small bottom inset: reveal once the top edge is ~80px into the viewport.
+    // An area-based threshold would never fire for sections much taller than a phone screen.
     const io = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) { el.classList.add('in'); io.disconnect() } },
-      { threshold: 0.15 },
+      { threshold: 0, rootMargin: '0px 0px -80px 0px' },
     )
     io.observe(el)
     return () => io.disconnect()
