@@ -6,6 +6,7 @@
 import { SiBurpsuite, SiCss, SiExpo, SiExpress, SiFigma, SiFirebase, SiGit, SiGithub, SiHtml5, SiJavascript, SiJsonwebtokens, SiKalilinux, SiLinux, SiMetasploit, SiMongodb, SiNetlify, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiRedux, SiStripe, SiTailwindcss, SiTypescript, SiVercel, SiWireshark } from 'react-icons/si'
 import { FaFlag, FaNetworkWired } from 'react-icons/fa'
 import photo from './assets/photo.jpg'
+import smashquote from './assets/projects/smashquote.jpg'
 import mbsmash from './assets/projects/mbsmash.jpg'
 import goalpath from './assets/projects/goalpath.jpg'
 import sekhanei from './assets/projects/sekhanei.jpg'
@@ -98,6 +99,15 @@ export const skills = [
 ]
 
 export const projects = [
+  {
+    title: 'SmashQuote',
+    year: '2026',
+    featured: true,
+    image: smashquote,
+    summary:
+      'Multi-tenant quoting and estimating platform for smash repair shops. Each shop is an isolated tenant behind Postgres Row-Level Security; the quote builder mixes parts, paint, labour and sublet lines with live GST totals computed by a DB trigger, and produces a printable A4 quote with the shop letterhead. Vehicle photos upload straight from the browser to Cloudflare R2 via presigned URLs.',
+    tech: ['Next.js', 'React', 'Supabase', 'PostgreSQL', 'Row-Level Security', 'Cloudflare R2', 'Tailwind'],
+  },
   {
     title: 'MB Smash Repair',
     year: '2026',

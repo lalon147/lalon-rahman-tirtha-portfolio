@@ -1,4 +1,4 @@
-import { FaGithub, FaExternalLinkAlt, FaServer } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaServer, FaLock } from 'react-icons/fa'
 import { Section } from './Section'
 import { projects, profile } from '../data'
 
@@ -9,6 +9,7 @@ function Links({ p }) {
       {p.live && <a className={cls} href={p.live} target="_blank" rel="noreferrer"><FaExternalLinkAlt /> Live</a>}
       {p.code && <a className={cls} href={p.code} target="_blank" rel="noreferrer"><FaGithub /> {p.server ? 'Client' : 'Code'}</a>}
       {p.server && <a className={cls} href={p.server} target="_blank" rel="noreferrer"><FaServer /> Server</a>}
+      {!p.live && !p.code && <span className="inline-flex items-center gap-1.5 text-sm font-medium text-muted"><FaLock /> Private · in development</span>}
     </div>
   )
 }
@@ -24,16 +25,19 @@ function Tech({ tech }) {
 }
 
 function Featured({ p, flip }) {
+  const href = p.live || p.code
+  const frame = 'group block overflow-hidden rounded-xl border border-border'
+  const img = (
+    <img
+      src={p.image}
+      alt={`${p.title} screenshot`}
+      loading="lazy"
+      className="aspect-[16/10] w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+    />
+  )
   return (
     <article className={`grid items-center gap-8 md:grid-cols-2 ${flip ? 'md:[&>*:first-child]:order-2' : ''}`}>
-      <a href={p.live || p.code} target="_blank" rel="noreferrer" className="group block overflow-hidden rounded-xl border border-border">
-        <img
-          src={p.image}
-          alt={`${p.title} screenshot`}
-          loading="lazy"
-          className="aspect-[16/10] w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
-        />
-      </a>
+      {href ? <a href={href} target="_blank" rel="noreferrer" className={frame}>{img}</a> : <div className={frame}>{img}</div>}
       <div>
         <p className="font-mono text-xs text-accent">Featured · {p.year}</p>
         <h3 className="mt-1 text-2xl font-bold">{p.title}</h3>
