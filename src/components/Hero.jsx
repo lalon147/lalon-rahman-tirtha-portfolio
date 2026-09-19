@@ -57,12 +57,12 @@ export function Hero() {
           <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-accent/40 to-accent-2/40 blur-2xl" />
           <img
             src={profile.photo}
-            alt={profile.name}
-            width="316"
-            height="395"
+            alt={`${profile.name} avatar`}
+            width="800"
+            height="800"
             fetchPriority="high"
             decoding="async"
-            className="relative aspect-[4/5] w-full rounded-3xl border border-border object-cover object-top shadow-2xl"
+            className="relative aspect-square w-full rounded-3xl border border-border object-cover shadow-2xl"
           />
         </div>
       </div>

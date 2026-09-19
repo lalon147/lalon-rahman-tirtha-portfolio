@@ -5,7 +5,7 @@
 
 import { SiBurpsuite, SiCss, SiExpo, SiExpress, SiFigma, SiFirebase, SiGit, SiGithub, SiHtml5, SiJavascript, SiJsonwebtokens, SiKalilinux, SiLinux, SiMetasploit, SiMongodb, SiNetlify, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiRedux, SiStripe, SiTailwindcss, SiTypescript, SiVercel, SiWireshark } from 'react-icons/si'
 import { FaFlag, FaNetworkWired } from 'react-icons/fa'
-import photo from './assets/photo.jpg'
+import photo from './assets/avatar.jpg'
 import smashquote from './assets/projects/smashquote.jpg'
 import mbsmash from './assets/projects/mbsmash.jpg'
 import goalpath from './assets/projects/goalpath.jpg'
