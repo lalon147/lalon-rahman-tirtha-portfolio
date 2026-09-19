@@ -111,7 +111,7 @@ export const projects = [
     summary:
       'Parts management and ordering system for an auto-body repair shop. Staff log in, browse vehicles by make/model, manage the parts catalogue and place orders; invoices can be parsed straight into stock. Ships as an installable Android app via Trusted Web Activity.',
     tech: ['Next.js', 'React', 'PostgreSQL', 'Lucide', 'Vercel', 'Android TWA'],
-    live: 'https://mbsmash.vercel.app',
+    live: 'https://mbsmash.vercel.app/demo',
     code: 'https://github.com/lalon147/mbsmash',
   },
   {
