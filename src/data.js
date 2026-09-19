@@ -137,6 +137,7 @@ export const projects = [
     summary:
       'Marketplace for buying and selling used cars with three roles — admin, buyer and seller. Admin can verify or remove users, sellers list cars, buyers pay via Stripe. Firebase auth with JWT-protected API routes and TanStack Query on the client.',
     tech: ['React', 'Firebase', 'Express', 'MongoDB', 'Stripe', 'TanStack Query', 'JWT', 'DaisyUI'],
+    live: 'https://radiant-bavarois-69018a.netlify.app',
     code: 'https://github.com/lalon147/sekhanei-dot-com',
     server: 'https://github.com/lalon147/sekhanei-server',
   },
@@ -147,6 +148,7 @@ export const projects = [
     summary:
       'Online course platform. Admins add courses and verify instructors, students enrol and download course modules as PDF, and purchase statistics are charted with Recharts.',
     tech: ['React', 'Firebase', 'Express', 'MongoDB', 'Recharts', 'react-pdf', 'DaisyUI'],
+    live: 'https://master-programming-e5574.firebaseapp.com',
     code: 'https://github.com/lalon147/master-programming-project',
     server: 'https://github.com/lalon147/master-programming-server',
   },
@@ -157,6 +159,7 @@ export const projects = [
     summary:
       "Service-review site for an event manager (weddings, birthdays, occasions). Logged-in users can add services and create, edit or delete reviews; Firebase auth plus JWT authorisation and paginated data fetching.",
     tech: ['React', 'Firebase', 'Express', 'MongoDB', 'JWT'],
+    live: 'https://the-urban-luxary.web.app',
     code: 'https://github.com/lalon147/service-review-client',
     server: 'https://github.com/lalon147/service-review-server',
   },
