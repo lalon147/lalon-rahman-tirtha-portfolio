@@ -6,7 +6,7 @@ function Links({ p }) {
   const cls = 'inline-flex items-center gap-1.5 text-sm font-medium text-muted transition hover:text-accent'
   return (
     <div className="flex flex-wrap gap-4">
-      {p.live && <a className={cls} href={p.live} target="_blank" rel="noreferrer"><FaExternalLinkAlt /> Live</a>}
+      {p.live && <a className={cls} href={p.live} target="_blank" rel="noreferrer"><FaExternalLinkAlt /> {p.liveLabel || 'Live'}</a>}
       {p.code && <a className={cls} href={p.code} target="_blank" rel="noreferrer"><FaGithub /> {p.server ? 'Client' : 'Code'}</a>}
       {p.server && <a className={cls} href={p.server} target="_blank" rel="noreferrer"><FaServer /> Server</a>}
       {!p.live && !p.code && <span className="inline-flex items-center gap-1.5 text-sm font-medium text-muted"><FaLock /> Private · in development</span>}

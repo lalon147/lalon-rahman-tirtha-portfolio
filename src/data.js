@@ -109,9 +109,10 @@ export const projects = [
     featured: true,
     image: mbsmash,
     summary:
-      'Parts management and ordering system for an auto-body repair shop. Staff log in, browse vehicles by make/model, manage the parts catalogue and place orders; invoices can be parsed straight into stock. Ships as an installable Android app via Trusted Web Activity.',
+      'Parts management and ordering system in daily use at a real Australian smash repair shop. Staff order every part for every car through it, chase overdue deliveries and reconcile invoices into stock — by the owner\'s estimate around $20,000 of parts orders a week. Next.js on PostgreSQL with signed sessions, login throttling and a full change log; ships as an installable Android app via Trusted Web Activity. The live link opens an interactive demo with sample data — the production system stays private.',
     tech: ['Next.js', 'React', 'PostgreSQL', 'Lucide', 'Vercel', 'Android TWA'],
-    live: 'https://mbsmash.vercel.app/demo',
+    live: 'https://mbsmash-demo.netlify.app',
+    liveLabel: 'Live demo',
     code: 'https://github.com/lalon147/mbsmash',
   },
   {
