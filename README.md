@@ -7,7 +7,8 @@ Built with React 19, Vite and Tailwind CSS v4. Deployed on Netlify.
 ## Editing content
 
 Everything shown on the site — bio, skills, projects, links — lives in **`src/data.js`**.
-Project screenshots go in `src/assets/projects/`, the resume PDF in `public/`.
+Project screenshots go in `src/assets/projects/`, hobby photos in `src/assets/hobbies/`, the resume PDF in `public/`.
+The Hobbies section and its nav link only appear once `hobbies` or `gallery` in `data.js` has entries.
 
 ## Development
 

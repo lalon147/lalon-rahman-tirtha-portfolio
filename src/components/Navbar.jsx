@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub } from 'react-icons/fa'
-import { profile } from '../data'
+import { profile, hobbies, gallery } from '../data'
 
 const links = [
   ['About', '#about'],
+  ['Security', '#security'],
   ['Skills', '#skills'],
   ['Projects', '#projects'],
+  ...(hobbies.length || gallery.length ? [['Hobbies', '#hobbies']] : []),
   ['Contact', '#contact'],
 ]
 

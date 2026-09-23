@@ -3,8 +3,8 @@
 //  site — no need to touch the components.
 // ─────────────────────────────────────────────────────────────
 
-import { SiBurpsuite, SiCss, SiExpo, SiExpress, SiFigma, SiFirebase, SiGit, SiGithub, SiHtml5, SiJavascript, SiJsonwebtokens, SiKalilinux, SiLinux, SiMetasploit, SiMongodb, SiNetlify, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiRedux, SiStripe, SiTailwindcss, SiTypescript, SiVercel, SiWireshark } from 'react-icons/si'
-import { FaFlag, FaNetworkWired } from 'react-icons/fa'
+import { SiBurpsuite, SiGnubash, SiHackthebox, SiOwasp, SiPfsense, SiPython, SiTryhackme, SiUbuntu, SiCss, SiExpo, SiExpress, SiFigma, SiFirebase, SiGit, SiGithub, SiHtml5, SiJavascript, SiJsonwebtokens, SiKalilinux, SiLinux, SiMetasploit, SiMongodb, SiNetlify, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiRedux, SiStripe, SiTailwindcss, SiTypescript, SiVercel, SiWireshark } from 'react-icons/si'
+import { FaFlag, FaNetworkWired, FaPhoneAlt, FaSearch, FaShieldAlt, FaTerminal } from 'react-icons/fa'
 import photo from './assets/avatar.jpg'
 import smashquote from './assets/projects/smashquote.jpg'
 import mbsmash from './assets/projects/mbsmash.jpg'
@@ -18,32 +18,118 @@ import creativeBrain from './assets/projects/creative-brain.jpg'
 export const profile = {
   name: 'Lalon Rahman Tirtha',
   firstName: 'Lalon',
-  title: 'Full-Stack Developer',
-  roles: ['Full-Stack Developer', 'React & Next.js Developer', 'React Native Developer', 'Security Enthusiast'],
+  title: 'Cyber Security & Full-Stack Developer',
+  roles: ['Aspiring Penetration Tester', 'Security-Focused Developer', 'CTF Player', 'Full-Stack Developer'],
   photo,
+  // Public copy: no address, phone or email — visitors reach out through the contact form.
+  resume: '/Lalon-Rahman-Tirtha-Resume.pdf',
   tagline:
-    'I build web and mobile products end to end — React and Next.js on the front, Node.js, Express and MongoDB/PostgreSQL behind — and I like to break them too, with a Kali box always within reach.',
+    "I break things to learn how to protect them — recon, enumeration and exploitation in the lab, hardened firewalls and servers at home — and I bring that attacker's view to the production apps I build.",
   about: [
-    "I'm a developer who started with the MERN stack in 2022 and have since shipped full products: marketplaces, learning platforms, an auto-repair parts management system and a cross-platform goal-tracking app.",
-    'Outside of building things I spend time on the offensive side of security — CTFs, network scanning and web app testing with Nmap, Burp Suite and Metasploit. It makes me a more careful engineer: I think about auth, input validation and rate limiting before the first line of a feature is written.',
-    "I'm open to full-time, contract and freelance work, remote or on-site.",
+    "I've been training on the offensive side of security since 2019: Hack The Box and TryHackMe machines worked end to end — reconnaissance, enumeration, exploitation, privilege escalation — with written walkthroughs. I've completed the TryHackMe Jr Penetration Tester path and I'm working through TCM Security's PNPT, including Active Directory attacks and lateral movement.",
+    'I also build and defend real infrastructure: a segmented network behind a pfSense firewall (on-premises and on Azure) and a hardened VoIP/PBX server, kept patched, access-reviewed and scanned from the outside.',
+    "My background is full-stack development, and I still ship production software — including a parts-management system a Melbourne repair shop runs on every day. Knowing how applications are built makes me better at finding where they break, and it means auth, input validation and rate limiting come before the first line of any feature.",
   ],
-  interests: ['Machine Learning', 'Artificial Intelligence', 'Cloud Computing', 'Cyber Security', 'Robotics'],
+  interests: ['Penetration Testing', 'Active Directory Security', 'Network Defence', 'Web App Security', 'Cloud Security', 'AI & Machine Learning'],
   social: {
     github: 'https://github.com/lalon147',
     linkedin: 'https://www.linkedin.com/in/lalon-rahman-tirtha/',
   },
 }
 
+// status: 'done' | 'progress'
+export const certifications = [
+  { name: 'Jr Penetration Tester learning path', issuer: 'TryHackMe', status: 'done' },
+  { name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', status: 'done' },
+  { name: 'Practical Network Penetration Tester (PNPT)', issuer: 'TCM Security', status: 'progress' },
+  { name: 'Certified Ethical Hacker — coursework', issuer: 'EC-Council · 2019', status: 'done' },
+]
+
+export const securityWork = [
+  {
+    title: 'Offensive Security Labs',
+    icon: SiHackthebox,
+    summary:
+      'Hack The Box and TryHackMe machines completed end to end — reconnaissance, enumeration, exploitation and privilege escalation — each with a written walkthrough. Now extending into Active Directory post-exploitation through the PNPT course.',
+    tags: ['Nmap', 'Burp Suite', 'Metasploit', 'Privilege escalation', 'Active Directory'],
+  },
+  {
+    title: 'pfSense Firewall Network',
+    icon: SiPfsense,
+    summary:
+      'Designed and deployed a segmented network behind pfSense — WAN/LAN interfaces, VLANs, NAT and default-deny rule sets — on-premises and on Azure, then validated it by scanning from outside.',
+    tags: ['pfSense', 'VLANs', 'NAT', 'Default-deny', 'Azure'],
+  },
+  {
+    title: 'Hardened VoIP / PBX Server',
+    icon: FaPhoneAlt,
+    summary:
+      'Built a VoIP/PBX server on Ubuntu with SIP extensions and call routing, then hardened it: management access restricted, strong credentials enforced, exposed services kept to a minimum, patched on a routine.',
+    tags: ['Ubuntu', 'SIP', 'Hardening', 'Least privilege'],
+  },
+  {
+    title: 'Secure-by-Default Production Apps',
+    icon: FaShieldAlt,
+    summary:
+      'The apps below are built with the same mindset: Postgres row-level security for tenant isolation, signed sessions, database-backed login throttling, field-level audit logs and server-side validation against the OWASP Top 10.',
+    tags: ['OWASP Top 10', 'Row-Level Security', 'Rate limiting', 'Audit logging'],
+  },
+]
+
+// Your hobbies and leisure time. The section appears on the site as soon as
+// either list has something in it. Put photos in src/assets/hobbies/ and import
+// them at the top of this file, e.g.  import hike from './assets/hobbies/hike.jpg'
+export const hobbies = [
+  // { title: 'Hiking', text: 'Weekend trails around the Dandenongs.' },
+]
+export const gallery = [
+  // { src: hike, caption: 'Summit of Mt Dandenong' },
+]
+
 // Icons come from react-icons (https://react-icons.github.io/react-icons) — import them above.
 export const skills = [
   {
-    group: 'Frontend',
+    group: 'Offensive Security',
+    items: [
+      { name: 'Kali Linux', icon: SiKalilinux },
+      { name: 'Nmap', icon: FaNetworkWired },
+      { name: 'Burp Suite', icon: SiBurpsuite },
+      { name: 'Metasploit', icon: SiMetasploit },
+      { name: 'Recon & OSINT', icon: FaSearch },
+      { name: 'OWASP Top 10', icon: SiOwasp },
+      { name: 'Hack The Box', icon: SiHackthebox },
+      { name: 'TryHackMe', icon: SiTryhackme },
+      { name: 'CTF', icon: FaFlag },
+    ],
+  },
+  {
+    group: 'Network & Defence',
+    items: [
+      { name: 'pfSense', icon: SiPfsense },
+      { name: 'Wireshark', icon: SiWireshark },
+      { name: 'Network segmentation', icon: FaNetworkWired },
+      { name: 'Linux hardening', icon: SiLinux },
+      { name: 'Ubuntu Server', icon: SiUbuntu },
+      { name: 'Log & traffic analysis', icon: FaTerminal },
+    ],
+  },
+  {
+    group: 'Scripting',
+    items: [
+      { name: 'Python', icon: SiPython },
+      { name: 'Bash', icon: SiGnubash },
+      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'TypeScript', icon: SiTypescript },
+    ],
+  },
+  {
+    group: 'Full-Stack Development',
     items: [
       { name: 'React', icon: SiReact },
       { name: 'Next.js', icon: SiNextdotjs },
-      { name: 'TypeScript', icon: SiTypescript },
-      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'React Native', icon: SiExpo },
+      { name: 'Node.js', icon: SiNodedotjs },
+      { name: 'Express', icon: SiExpress },
       { name: 'Tailwind CSS', icon: SiTailwindcss },
       { name: 'Redux Toolkit', icon: SiRedux },
       { name: 'HTML5', icon: SiHtml5 },
@@ -51,44 +137,23 @@ export const skills = [
     ],
   },
   {
-    group: 'Backend & Data',
+    group: 'Data & Auth',
     items: [
-      { name: 'Node.js', icon: SiNodedotjs },
-      { name: 'Express', icon: SiExpress },
-      { name: 'MongoDB', icon: SiMongodb },
       { name: 'PostgreSQL', icon: SiPostgresql },
+      { name: 'MongoDB', icon: SiMongodb },
       { name: 'Firebase', icon: SiFirebase },
       { name: 'JWT', icon: SiJsonwebtokens },
       { name: 'Stripe', icon: SiStripe },
     ],
   },
   {
-    group: 'Mobile',
-    items: [
-      { name: 'React Native', icon: SiReact },
-      { name: 'Expo', icon: SiExpo },
-    ],
-  },
-  {
-    group: 'Security',
-    items: [
-      { name: 'Kali Linux', icon: SiKalilinux },
-      { name: 'Nmap', icon: FaNetworkWired },
-      { name: 'Burp Suite', icon: SiBurpsuite },
-      { name: 'Metasploit', icon: SiMetasploit },
-      { name: 'Wireshark', icon: SiWireshark },
-      { name: 'CTF', icon: FaFlag },
-    ],
-  },
-  {
-    group: 'Tools',
+    group: 'Tools & Cloud',
     items: [
       { name: 'Git', icon: SiGit },
       { name: 'GitHub', icon: SiGithub },
       { name: 'Vercel', icon: SiVercel },
       { name: 'Netlify', icon: SiNetlify },
       { name: 'Figma', icon: SiFigma },
-      { name: 'Linux', icon: SiLinux },
     ],
   },
 ]
